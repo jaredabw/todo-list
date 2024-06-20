@@ -22,7 +22,7 @@ export default function TodoItem({
                 defaultValue={todo.title}
                 disabled={todo.completed}
                 onChange={(e) => onEdit(todo.id, e.target.value)}
-                className={todo.completed ? "line-through text-gray-500 bg-transparent focus-within:outline-none pointer-events-none" : "bg-transparent focus-within:outline-none"}/>
+                className={todo.completed ? "line-through text-gray-500 bg-transparent focus-within:outline-none pointer-events-none w-8/12" : "bg-transparent focus-within:outline-none w-8/12"}/>
             </label>
             <button className="p-2" onClick={() => onDelete(todo.id)}>
                 <Trash2 size={20} className="text-gray-500"/>
