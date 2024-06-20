@@ -1,6 +1,6 @@
 import { Todo } from '../types/todos';
 
-export const dummyData: Todo[] = [
+export const defaultData: Todo[] = [
     {
         id: 1,
         title: 'Learn React',
