@@ -37,11 +37,16 @@ export default function useTodos() {
         setTodos((prevTodos) => prevTodos.filter((todo) => !todo.completed))
       }
 
+      function editTodo(id: number, title: string) {
+        setTodos((prevTodos) => prevTodos.map((todo) => (todo.id === id ? {...todo, title}: todo)))
+      }
+
       return {
         todos,
         setTodoCompleted,
         addTodo,
         deleteTodo,
-        deleteAllCompleted
+        deleteAllCompleted,
+        editTodo
       }
 }

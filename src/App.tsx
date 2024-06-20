@@ -9,7 +9,8 @@ function App() {
     addTodo,
     setTodoCompleted,
     deleteTodo,
-    deleteAllCompleted
+    deleteAllCompleted,
+    editTodo
   } = useTodos();
 
   return (
@@ -19,7 +20,7 @@ function App() {
       </h1>
       <div className="max-w-lg mx-auto bg-slate-100 rounded-md p-5 space-y-6">
         <AddTodoForm onSubmit={addTodo}/>
-        <TodoList todos={todos} onCompletedChange={setTodoCompleted} onDelete={deleteTodo}/>
+        <TodoList todos={todos} onCompletedChange={setTodoCompleted} onDelete={deleteTodo} onEdit={editTodo}/>
         <TodoSummary todos={todos} deleteAllCompleted={deleteAllCompleted}/>
       </div>
     </main>
